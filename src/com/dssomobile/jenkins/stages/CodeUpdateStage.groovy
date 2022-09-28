@@ -16,7 +16,6 @@ def getCodeFromGit(List<CodeProjectDo> codeProjectDoList, String branchName, Str
             for (codeProjectDo in codeProjectDoList) {
                 String codeProjectDir = codeProjectDo.key
                 log.i("执行${codeProjectDir}工程代码更新")
-                log.i("执行${codeProjectDo.keyRepoUrl}工程代码更新")
                 sh "mkdir -p $codeProjectDir"
                 dir(codeProjectDir) {
                     git branch: branchName, credentialsId: credentialsId, url: codeProjectDo.repoUrl

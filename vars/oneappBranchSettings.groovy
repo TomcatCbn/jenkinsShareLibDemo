@@ -23,11 +23,11 @@ def defaultSettings() {
 
     Config.codeProjects = [
             'dssomobile-oneapp-basic-error': [
-                    keyKey     : 'dssomobile-oneapp-basic-error',
-                    keyRepoUrl : 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-basic-error.git',
-                    keyPackages: [
-                            [keyPackageName : 'basic_error',
-                             keyRelativePath: '.']
+                    key     : 'dssomobile-oneapp-basic-error',
+                    repoUrl : 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-basic-error.git',
+                    packages: [
+                            [packageName : 'basic_error',
+                             relativePath: '.']
 
                     ]
 
