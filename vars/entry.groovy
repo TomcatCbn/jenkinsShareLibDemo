@@ -3,6 +3,7 @@ import com.dssomobile.jenkins.stages.CodeUpdateStage
 //import com.dssomobile.jenkins.stages.DeployStage
 
 def call() {
+    log('begin pipeline...')
 
     def codeUpdateStage = new CodeUpdateStage()
 //    def buildStage = new BuildStage()
@@ -12,7 +13,7 @@ def call() {
     def credentialsId = 'gitlab0'
 
     node {
-        OneappBranchSettings.config()
+        oneappBranchSettings.config()
     }
 
     pipeline {
