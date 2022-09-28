@@ -1,8 +1,39 @@
 // 该文件存放oneapp group的一些配置，当切换其他应用group的时候
 // 只需要更换这里的配置
 
-import com.dssomobile.jenkins.models.CodeProjectDo
-import com.dssomobile.jenkins.models.DartPackageDo
+def config() {
+    defaultSettings()
+}
+
+def keyRepoUrl = 'repoUrl'
+def keyKey = 'key'
+def keyPackages = 'packages'
+def keyPackageName = 'packageName'
+def keyRelativePath = 'relativePath'
+
+def defaultSettings() {
+//    def cp1 = new CodeProjectDo()
+//    cp1.key = 'dssomobile-oneapp-basic-error'
+//    cp1.repoUrl = 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-basic-error.git'
+//    def cp1P = new DartPackageDo()
+//    cp1P.packageName = 'basic_error'
+//    cp1P.relativePath = '.'
+
+//    cp1.packages = [cp1P]
+
+    Config.codeProjects = [
+            'dssomobile-oneapp-basic-error': [
+                    keyKey     : 'dssomobile-oneapp-basic-error',
+                    keyRepoUrl : 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-basic-error.git',
+                    keyPackages: [
+                            [keyPackageName : 'basic_error',
+                             keyRelativePath: '.']
+
+                    ]
+
+            ],
+    ]
+}
 
 /// oneapp group 所有工程
 //file:noinspection GrPackage
@@ -56,22 +87,3 @@ def projectsGit = [
         'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-kit-debugtools.git',
         'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-kit-precommithooks.git',
 ]
-
-def config() {
-    defaultSettings()
-}
-
-def defaultSettings() {
-    def cp1 = new CodeProjectDo()
-    cp1.key = 'dssomobile-oneapp-basic-error'
-    cp1.repoUrl = 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-basic-error.git'
-    def cp1P = new DartPackageDo()
-    cp1P.packageName = 'basic_error'
-    cp1P.relativePath = '.'
-
-    cp1.packages = [cp1P]
-
-    Config.codeProjects = [
-            cp1.key: cp1,
-    ]
-}
