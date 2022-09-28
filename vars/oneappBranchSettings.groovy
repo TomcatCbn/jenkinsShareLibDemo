@@ -12,14 +12,6 @@ def keyPackageName = 'packageName'
 def keyRelativePath = 'relativePath'
 
 def defaultSettings() {
-//    def cp1 = new CodeProjectDo()
-//    cp1.key = 'dssomobile-oneapp-basic-error'
-//    cp1.repoUrl = 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-basic-error.git'
-//    def cp1P = new DartPackageDo()
-//    cp1P.packageName = 'basic_error'
-//    cp1P.relativePath = '.'
-
-//    cp1.packages = [cp1P]
 
     Config.codeProjects = [
             'dssomobile-oneapp-basic-error': [
@@ -32,6 +24,10 @@ def defaultSettings() {
                     ]
 
             ],
+    ]
+
+    Config.settings = [
+            defaultPackagesDir: 'packages'
     ]
 }
 
