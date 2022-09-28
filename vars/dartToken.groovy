@@ -1,7 +1,6 @@
 // dart token pub add
 
+// 给[repositoryUrl]用环境变量[tokenEnvVar]进行授权
 def call(String repositoryUrl, String tokenEnvVar){
-    echo "TOKEN_FOR_JFROG=$TOKEN_FOR_JFROG"
-    echo "TOKEN_JFROG=$TOKEN_JFROG"
     sh "dart pub token add $repositoryUrl --env-var $tokenEnvVar"
 }
