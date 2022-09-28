@@ -25,7 +25,7 @@ def call() {
             stage('codeUpdateStage') {
                 steps {
                     script {
-                        log.i("Stage: ${codeUpdateStage.name} begin...")
+                        log.i("Stage: ${codeUpdateStage.name()} begin...")
                         codeUpdateStage.getCodeFromGit(Config.codeProjects.values(), Config.settings, branchName, credentialsId)
                     }
                 }
@@ -34,7 +34,7 @@ def call() {
             stage('buildStage') {
                 steps {
                     script {
-                        log.i("Stage: ${buildStage.name} begin...")
+                        log.i("Stage: ${buildStage.name()} begin...")
                         buildStage.buildAndroid(Config.codeProjects.get(mainProject), Config.settings)
                     }
                 }

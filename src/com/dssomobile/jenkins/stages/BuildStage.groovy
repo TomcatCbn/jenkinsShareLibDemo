@@ -3,7 +3,9 @@ package com.dssomobile.jenkins.stages
 import com.dssomobile.jenkins.models.CodeProjectDo
 import com.dssomobile.jenkins.models.SettingsDo
 
-def name = 'Build Stage'
+def name() {
+    return 'Build Stage'
+}
 
 def buildAndroid(CodeProjectDo mainProject, SettingsDo settings) {
     log.i("${name}: 执行buildAndroid")

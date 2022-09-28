@@ -4,10 +4,12 @@ package com.dssomobile.jenkins.stages
 import com.dssomobile.jenkins.models.CodeProjectDo
 import com.dssomobile.jenkins.models.SettingsDo
 
-def name = 'Code Update Stage'
+def name() {
+    return 'Code Update Stage'
+}
 
 def getCodeFromGit(List<CodeProjectDo> codeProjectDoList, SettingsDo settings, String branchName, String credentialsId) {
-    log.i("${name}: 执行getCodeFromGit")
+    log.i("${name()}: 执行getCodeFromGit")
     // 各个子工程
     script {
         dir(settings.defaultPackageDir) {
