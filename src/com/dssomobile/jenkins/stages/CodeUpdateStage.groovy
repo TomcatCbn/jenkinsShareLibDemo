@@ -12,7 +12,7 @@ def getCodeFromGit(List<CodeProjectDo> codeProjectDoList, SettingsDo settings, S
     log.i("${name()}: 执行getCodeFromGit")
     // 各个子工程
     script {
-        dir(settings.defaultPackagesDir) {
+        dir(settings.defaultPackageDir) {
             for (codeProjectDo in codeProjectDoList) {
                 String codeProjectDir = codeProjectDo.key
                 log.i("执行${codeProjectDir}工程代码更新")
