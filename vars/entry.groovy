@@ -21,6 +21,9 @@ def call() {
 
     pipeline {
         agent any
+        environment {
+            TOKEN_FOR_JFROG = env.TOKEN_JFROG
+        }
         stages {
             stage('codeUpdateStage') {
                 steps {
