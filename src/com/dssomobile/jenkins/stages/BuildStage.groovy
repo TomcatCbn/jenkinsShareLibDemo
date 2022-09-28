@@ -8,7 +8,7 @@ def name() {
 }
 
 def buildAndroid(CodeProjectDo mainProject, SettingsDo settings) {
-    log.i("${name}: 执行buildAndroid")
+    log.i("${name()}: 执行buildAndroid")
     script {
         dir(settings.defaultPackageDir) {
             log.i "begin build ${mainProject.key}"
