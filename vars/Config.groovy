@@ -6,5 +6,5 @@ class Config implements Serializable {
     static Map<String, CodeProjectDo> codeProjects = [:]
 
     // pipeline的一些全局配置
-    static SettingsDo settings = new Settings()
+    static SettingsDo settings = new SettingsDo()
 }
