@@ -4,6 +4,7 @@ import com.dssomobile.jenkins.stages.BuildStage
 
 //import com.dssomobile.jenkins.stages.DeployStage
 
+// jenkins pipeline入口
 def call() {
     log.i('begin pipeline...')
 
@@ -35,7 +36,7 @@ def call() {
                 steps {
                     script {
                         log.i("Stage: ${buildStage.name()} begin...")
-                        buildStage.buildAndroid(Config.codeProjects.get(mainProject), Config.settings)
+                        buildStage.buildAndroid(Config.codeProjects[mainProject], Config.settings)
                     }
                 }
             }
