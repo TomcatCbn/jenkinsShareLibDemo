@@ -36,7 +36,8 @@ def call() {
                     script {
                         log.i("Stage: ${buildStage.name()} begin...")
                         log.i("build package: ${Config.codeProjects[mainProject]}")
-                        buildStage.buildAndroid(Config.codeProjects[mainProject])
+//                        buildStage.buildAndroid(Config.codeProjects[mainProject])
+                        buildStage.buildAndroid(Config.settings)
                     }
                 }
             }

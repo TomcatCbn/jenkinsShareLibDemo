@@ -7,7 +7,7 @@ def name() {
     return 'Build Stage'
 }
 
-def buildAndroid(CodeProjectDo mainProject) {
+def buildAndroid(SettingsDo settingsDo) {
     log.i("${name()}: 执行buildAndroid")
     script {
 //        dir(settings.defaultPackageDir) {
@@ -16,6 +16,6 @@ def buildAndroid(CodeProjectDo mainProject) {
 //            sh 'flutter build apk'
 //            archiveArtifacts artifacts: 'build/app/outputs/apk/**/*.apk'
 //        }
-        log.i("$mainProject")
+        log.i("$settingsDo")
     }
 }
