@@ -8,7 +8,7 @@ def name(){
 }
 
 def getCodeFromGit(List<CodeProjectDo> codeProjectDoList, String branchName, String credentialsId) {
-    log("执行getCodeFromGit")
+    log.i("执行getCodeFromGit")
 
     // 各个子工程
     script {
