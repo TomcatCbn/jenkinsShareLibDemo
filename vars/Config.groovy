@@ -1,5 +1,5 @@
 import com.dssomobile.jenkins.models.CodeProjectDo
-//import com.dssomobile.jenkins.models.SettingsDo
+import com.dssomobile.jenkins.models.SettingsDo
 
 class Config implements Serializable {
     // 当前选中的工程信息
