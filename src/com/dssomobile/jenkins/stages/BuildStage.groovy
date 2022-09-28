@@ -11,6 +11,7 @@ def buildAndroid(codeProjectDo, SettingsDo settingsDo) {
     script {
         dir("${settingsDo.defaultPackageDir}/${codeProjectDo.key}") {
             log.i "begin build ${codeProjectDo.key}"
+            dartToken(settingsDo.dartPubHostedUrl, settingsDo.dartTokenEnvVar)
             sh 'flutter pub get'
             sh 'flutter build apk'
             archiveArtifacts artifacts: 'build/app/outputs/apk/**/*.apk'

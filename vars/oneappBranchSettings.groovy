@@ -38,7 +38,9 @@ def defaultSettings() {
     ]
 
     Config.settings = [
-            defaultPackageDir: 'packages'
+            defaultPackageDir: 'packages',
+            dartPubHostedUrl : 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-virtual/',
+            dartTokenEnvVar: 'TOKEN_JFROG',
     ]
 }
 
