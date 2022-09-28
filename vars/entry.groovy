@@ -18,7 +18,7 @@ def call() {
     pipeline {
         agent any
         stages {
-            stage(codeUpdateStage.name()) {
+            stage('codeUpdateStage') {
                 steps {
                     script {
                         log("Stage: ${codeUpdateStage.name()} begin...")
