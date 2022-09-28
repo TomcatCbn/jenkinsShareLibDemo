@@ -1,0 +1,3 @@
+@Library("dssomobileLib") _
+
+entry()
