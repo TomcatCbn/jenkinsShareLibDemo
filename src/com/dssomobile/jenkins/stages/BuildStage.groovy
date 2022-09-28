@@ -9,7 +9,7 @@ def name() {
 def buildAndroid(codeProjectDo, SettingsDo settingsDo) {
     log.i("${name()}: 执行buildAndroid")
     script {
-        dir("${settings.defaultPackageDir}/${codeProjectDo.key}") {
+        dir("${settingsDo.defaultPackageDir}/${codeProjectDo.key}") {
             log.i "begin build ${codeProjectDo.key}"
             sh 'flutter pub get'
             sh 'flutter build apk'
