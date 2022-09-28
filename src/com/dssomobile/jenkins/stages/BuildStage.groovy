@@ -7,15 +7,15 @@ def name() {
     return 'Build Stage'
 }
 
-def buildAndroid(CodeProjectDo mainProject, SettingsDo settings) {
+def buildAndroid(CodeProjectDo mainProject) {
     log.i("${name()}: 执行buildAndroid")
     script {
-        dir(settings.defaultPackageDir) {
-            log.i "begin build ${mainProject.key}"
-            sh 'flutter pub get'
-            sh 'flutter build apk'
-            archiveArtifacts artifacts: 'build/app/outputs/apk/**/*.apk'
-        }
-
+//        dir(settings.defaultPackageDir) {
+//            log.i "begin build ${mainProject.key}"
+//            sh 'flutter pub get'
+//            sh 'flutter build apk'
+//            archiveArtifacts artifacts: 'build/app/outputs/apk/**/*.apk'
+//        }
+        log.i("$mainProject")
     }
 }
