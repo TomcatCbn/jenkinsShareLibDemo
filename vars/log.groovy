@@ -1,9 +1,19 @@
-//带颜色打印信息
-def call(value, color = 'green') {
-    colors = ['red'  : "\033[40;31m >>>>>>>>>>>${value}<<<<<<<<<<< \033[0m",
-              'blue' : "\033[47;34m ${value} \033[0m",
-              'green': "\033[40;32m >>>>>>>>>>>${value}<<<<<<<<<<< \033[0m"]
-    ansiColor('xterm') {
-        println(colors[color])
-    }
-}
+def       a(String msg) { echo "ATTENTION: $msg"   }
+
+def       i(String msg) { info(msg)                }
+
+def       n(String msg) { notice(msg)              }
+
+def       w(String msg) { warning(msg)             }
+
+def       e(String msg) { echo "$msg"              }
+
+def    info(String msg) { echo "INFO: $msg"        }
+
+def  notice(String msg) { echo "NOTICE: $msg"      }
+
+def warning(String msg) { echo "WARNING: $msg"     }
+
+def     err(String msg) { error " $msg"            }
+
+return this

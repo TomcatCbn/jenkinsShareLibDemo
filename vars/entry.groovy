@@ -3,7 +3,7 @@ import com.dssomobile.jenkins.stages.CodeUpdateStage
 //import com.dssomobile.jenkins.stages.DeployStage
 
 def call() {
-    log('begin pipeline...')
+    log.i('begin pipeline...')
 
     def codeUpdateStage = new CodeUpdateStage()
 //    def buildStage = new BuildStage()
@@ -22,7 +22,7 @@ def call() {
             stage('codeUpdateStage') {
                 steps {
                     script {
-                        log("Stage: ${codeUpdateStage.name()} begin...")
+                        log.i("Stage: ${codeUpdateStage.name()} begin...")
                         codeUpdateStage.getCodeFromGit(Config.codeProjects.values(), branchName, credentialsId)
                     }
                 }
