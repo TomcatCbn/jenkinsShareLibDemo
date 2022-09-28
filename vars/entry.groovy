@@ -1,6 +1,6 @@
-import com.dssomobile.jenkins.stage.CodeUpdateStage
-//import com.dssomobile.jenkins.stage.BuildStage
-//import com.dssomobile.jenkins.stage.DeployStage
+import com.dssomobile.jenkins.stages.CodeUpdateStage
+//import com.dssomobile.jenkins.stages.BuildStage
+//import com.dssomobile.jenkins.stages.DeployStage
 
 def call() {
 

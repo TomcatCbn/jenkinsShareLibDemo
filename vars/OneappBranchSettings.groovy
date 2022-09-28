@@ -1,8 +1,8 @@
 // 该文件存放oneapp group的一些配置，当切换其他应用group的时候
 // 只需要更换这里的配置
 
-import com.dssomobile.jenkins.model.CodeProjectDo
-import com.dssomobile.jenkins.model.DartPackageDo
+import com.dssomobile.jenkins.models.CodeProjectDo
+import com.dssomobile.jenkins.models.DartPackageDo
 
 /// oneapp group 所有工程
 //file:noinspection GrPackage
