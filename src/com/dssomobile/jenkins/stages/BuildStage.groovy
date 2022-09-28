@@ -1,21 +1,19 @@
 package com.dssomobile.jenkins.stages
 
-import com.dssomobile.jenkins.models.CodeProjectDo
 import com.dssomobile.jenkins.models.SettingsDo
 
 def name() {
     return 'Build Stage'
 }
 
-def buildAndroid(SettingsDo settingsDo) {
+def buildAndroid(codeProjectDo, SettingsDo settingsDo) {
     log.i("${name()}: 执行buildAndroid")
     script {
-//        dir(settings.defaultPackageDir) {
-//            log.i "begin build ${mainProject.key}"
-//            sh 'flutter pub get'
-//            sh 'flutter build apk'
-//            archiveArtifacts artifacts: 'build/app/outputs/apk/**/*.apk'
-//        }
-        log.i("$settingsDo")
+        dir("${settings.defaultPackageDir}/${codeProjectDo.key}") {
+            log.i "begin build ${codeProjectDo.key}"
+            sh 'flutter pub get'
+            sh 'flutter build apk'
+            archiveArtifacts artifacts: 'build/app/outputs/apk/**/*.apk'
+        }
     }
 }

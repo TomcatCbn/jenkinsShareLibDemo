@@ -2,7 +2,7 @@ package com.dssomobile.jenkins.models
 
 // 代码仓库描述
 class CodeProjectDo {
-    // 仓库名字
+    // 仓库名字/也是目录名
     String key
 
     // git仓库地址
