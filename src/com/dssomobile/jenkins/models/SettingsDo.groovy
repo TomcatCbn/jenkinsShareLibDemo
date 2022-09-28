@@ -9,4 +9,7 @@ class SettingsDo {
 
     // dart仓库token环境变量名
     String dartTokenEnvVar
+
+    // dart package publish to 地址
+    String dartPublishToUrl
 }
