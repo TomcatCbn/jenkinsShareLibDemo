@@ -1,5 +1,4 @@
 import com.dssomobile.jenkins.stages.CodeUpdateStage
-
 import com.dssomobile.jenkins.stages.BuildStage
 
 //import com.dssomobile.jenkins.stages.DeployStage
@@ -36,6 +35,7 @@ def call() {
                 steps {
                     script {
                         log.i("Stage: ${buildStage.name()} begin...")
+                        log.d("build package: ${Config.codeProjects[mainProject]}")
                         buildStage.buildAndroid(Config.codeProjects[mainProject], Config.settings)
                     }
                 }
