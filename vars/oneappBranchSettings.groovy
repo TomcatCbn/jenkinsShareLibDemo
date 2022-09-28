@@ -24,6 +24,17 @@ def defaultSettings() {
                     ]
 
             ],
+
+            'dssomobile-oneapp-app-main'   : [
+                    key     : 'dssomobile-oneapp-app-main',
+                    repoUrl : 'https://gitlab-rd0.maezia.com/dssomobile/oneapp/dssomobile-oneapp-app-main.git',
+                    packages: [
+                            [packageName : 'app_main',
+                             relativePath: '.']
+
+                    ]
+
+            ],
     ]
 
     Config.settings = [
