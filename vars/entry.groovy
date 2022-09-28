@@ -5,8 +5,8 @@ import com.dssomobile.jenkins.stage.CodeUpdateStage
 def call() {
 
     def codeUpdateStage = new CodeUpdateStage()
-    def buildStage = new BuildStage()
-    def deployStage = new DeployStage()
+//    def buildStage = new BuildStage()
+//    def deployStage = new DeployStage()
 
     def branchName = 'develop'
     def credentialsId = 'gitlab0'
