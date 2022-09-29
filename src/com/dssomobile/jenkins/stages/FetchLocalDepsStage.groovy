@@ -21,6 +21,7 @@ def fetchLocalDeps(CodeProjectDo projectDo) {
         def res = []
         prop.each {
             for ( codeProj in Config.codeProjects) {
+                log.i("try find ${it.key} in ${codeProj.key}")
                 if (codeProj.containsPackage(it.key)) {
                     res.add(codeProj)
                 }
