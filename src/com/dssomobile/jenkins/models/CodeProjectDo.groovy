@@ -27,13 +27,14 @@ class CodeProjectDo {
         ]
     }
 
-    bool containsPackage(String packageName) {
-        for( pack in packages) {
-            if(pack.packageName == packageName){
+    Boolean containsPackage(String packageName) {
+        for (pack in packages) {
+            if (pack.packageName == packageName) {
                 return true
             }
         }
 
         return false
     }
+
 }
