@@ -55,7 +55,7 @@ def call(String appProjectKey, String branchName) {
                 steps {
                     script {
                         log.i("Stage: ${codeUpdateStage.name()} begin...")
-                        log.i("local dependency is \n ${Config.dynamicData.selectedProject.collect { "${it.key}" }.join("\n")}")
+                        log.i("local dependency is \n${Config.dynamicData.selectedProject.collect { "${it.key}" }.join("\n")}")
                         codeUpdateStage.getCodeFromGit(Config.dynamicData.selectedProject, Config.settings, branchName)
                     }
                 }
