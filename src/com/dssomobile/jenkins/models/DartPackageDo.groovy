@@ -16,4 +16,7 @@ class DartPackageDo {
         ]
     }
 
+    String toString() {
+        "packageName: $packageName"
+    }
 }

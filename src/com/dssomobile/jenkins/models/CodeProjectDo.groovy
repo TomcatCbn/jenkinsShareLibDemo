@@ -37,4 +37,8 @@ class CodeProjectDo {
         return false
     }
 
+    String toString(){
+        "$key:key, packages: $packages"
+    }
+
 }

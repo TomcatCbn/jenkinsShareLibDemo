@@ -32,8 +32,11 @@ def defaultSettings() {
             'dssomobile-oneapp-basic-theme'    : basic_theme(),
             'dssomobile-oneapp-basic-storage'  : basic_storage(),
             'dssomobile-oneapp-basic-resource' : basic_resource(),
+            'dssomobile-oneapp-basic-push'     : basic_push(),
             'dssomobile-oneapp-basic-platform' : basic_platform(),
             'dssomobile-oneapp-basic-network'  : basic_network(),
+            'dssomobile-oneapp-basic-modular'  : basic_modular(),
+            'dssomobile-oneapp-basic-logger'   : basic_logger(),
             'dssomobile-oneapp-basic-intl'     : basic_intl(),
             'dssomobile-oneapp-basic-error'    : basic_error(),
     ]
