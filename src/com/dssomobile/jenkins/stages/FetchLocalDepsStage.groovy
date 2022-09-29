@@ -20,7 +20,7 @@ def fetchLocalDeps(CodeProjectDo projectDo) {
         def prop = fileTools.read_properties('local_deps_temp.properties')
         def res = []
         prop.each {
-            for ( codeProj in Config.codeProjects) {
+            for ( codeProj in Config.codeProjects.values()) {
                 log.i("try find ${it.key} in ${codeProj.key}")
                 if (codeProj.containsPackage(it.key)) {
                     res.add(codeProj)
