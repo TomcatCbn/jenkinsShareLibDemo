@@ -2,7 +2,6 @@
 // 只需要更换这里的配置
 import com.dssomobile.jenkins.models.CodeProjectDo
 import com.dssomobile.jenkins.models.DartPackageDo
-import com.dssomobile.jenkins.models.SettingsDo
 
 def config() {
     defaultSettings()
@@ -10,9 +9,33 @@ def config() {
 
 def defaultSettings() {
     Config.codeProjects = [
-            'dssomobile-oneapp-basic-error': basic_error(),
-
-            'dssomobile-oneapp-app-main'   : app_main(),
+            'dssomobile-oneapp-app-main'       : app_main(),
+            'dssomobile-oneapp-app-account'    : app_account(),
+            'dssomobile-oneapp-app-maintenance': app_maintenance(),
+            'dssomobile-oneapp-app-media'      : app_media(),
+            'dssomobile-oneapp-app-order'      : app_order(),
+            'dssomobile-oneapp-app-setting'    : app_setting(),
+            'dssomobile-oneapp-car-app'        : car_app(),
+            'dssomobile-oneapp-car-vehicle'    : car_vehicle(),
+            'dssomobile-oneapp-car-services'   : car_services(),
+            'dssomobile-oneapp-car-connector'  : car_connector(),
+            'dssomobile-oneapp-ui-basic'       : ui_basic(),
+            'dssomobile-oneapp-ui-business'    : ui_business(),
+            'dssomobile-oneapp-clr-setting'    : clr_setting(),
+            'dssomobile-oneapp-clr-payment'    : clr_payment(),
+            'dssomobile-oneapp-clr-order'      : clr_order(),
+            'dssomobile-oneapp-clr-media'      : clr_media(),
+            'dssomobile-oneapp-clr-maintenance': clr_maintenance(),
+            'dssomobile-oneapp-clr-geo'        : clr_geo(),
+            'dssomobile-oneapp-clr-account'    : clr_account(),
+            'dssomobile-oneapp-basic-webview'  : basic_webview(),
+            'dssomobile-oneapp-basic-theme'    : basic_theme(),
+            'dssomobile-oneapp-basic-storage'  : basic_storage(),
+            'dssomobile-oneapp-basic-resource' : basic_resource(),
+            'dssomobile-oneapp-basic-platform' : basic_platform(),
+            'dssomobile-oneapp-basic-network'  : basic_network(),
+            'dssomobile-oneapp-basic-intl'     : basic_intl(),
+            'dssomobile-oneapp-basic-error'    : basic_error(),
     ]
 
     Config.settings.defaultPackageDir = 'packages'
