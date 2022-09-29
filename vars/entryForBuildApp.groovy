@@ -33,7 +33,7 @@ def call(String appProjectKey, String branchName) {
                 }
             }
 
-            stage('codeUpdateStage') {
+            stage('codeUpdateStageForMain') {
                 steps {
                     script {
                         log.i("Stage: ${codeUpdateStage.name()} begin...")
@@ -51,7 +51,7 @@ def call(String appProjectKey, String branchName) {
                 }
             }
 
-            stage('codeUpdateStage') {
+            stage('codeUpdateStageForLocalDeps') {
                 steps {
                     script {
                         log.i("Stage: ${codeUpdateStage.name()} begin...")
