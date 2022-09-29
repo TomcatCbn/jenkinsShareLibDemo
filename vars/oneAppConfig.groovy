@@ -15,11 +15,11 @@ def defaultSettings() {
             'dssomobile-oneapp-app-main'   : app_main(),
     ]
 
-    Config.setting.defaultPackageDir = 'packages'
-    Config.setting.dartPubHostedUrl = 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-virtual'
-    Config.setting.dartTokenEnvVar = 'TOKEN_JFROG'
-    Config.setting.dartPublishToUrl = 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-internal-local'
-    Config.setting.gitCredentialsId = 'gitlab0'
+    Config.settings.defaultPackageDir = 'packages'
+    Config.settings.dartPubHostedUrl = 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-virtual'
+    Config.settings.dartTokenEnvVar = 'TOKEN_JFROG'
+    Config.settings.dartPublishToUrl = 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-internal-local'
+    Config.settings.gitCredentialsId = 'gitlab0'
 }
 
 def app_main() {
