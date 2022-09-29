@@ -20,7 +20,7 @@ def call() {
     pipeline {
         agent any
         environment {
-            Config.settings.dartTokenEnvVar = "${env.TOKEN_JFROG}"
+            TOKEN_JFROG = "${env.TOKEN_JFROG}"
         }
         stages {
             stage('codeUpdateStage') {

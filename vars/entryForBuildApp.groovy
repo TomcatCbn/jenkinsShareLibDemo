@@ -24,7 +24,7 @@ def call(String appProjectKey, String branchName) {
     pipeline {
         agent any
         environment {
-            Config.settings.dartTokenEnvVar = "${env.TOKEN_JFROG}"
+            TOKEN_JFROG = "${env.TOKEN_JFROG}"
         }
         stages {
             stage('codeUpdateStage') {
