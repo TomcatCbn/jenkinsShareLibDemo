@@ -3,7 +3,7 @@ package com.dssomobile.jenkins.models
 import com.dssomobile.jenkins.models.DartPackageDo
 
 // 代码仓库描述
-class CodeProjectDo {
+class CodeProjectDo implements  Serializable {
 
     // 仓库名字/也是目录名
     String key
@@ -37,8 +37,7 @@ class CodeProjectDo {
         return false
     }
 
-    String toString(){
-        "$key:key, packages: $packages"
+    String toString() {
+        "key:$key"
     }
-
 }

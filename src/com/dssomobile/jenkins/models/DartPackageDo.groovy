@@ -15,8 +15,4 @@ class DartPackageDo {
                 relativePath: relativePath,
         ]
     }
-
-    String toString() {
-        "packageName: $packageName"
-    }
 }
