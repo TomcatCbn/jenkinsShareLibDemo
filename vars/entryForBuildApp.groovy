@@ -17,6 +17,10 @@ def call(String appProjectKey, String branchName) {
     def environmentStage = new EnvironmentPrepareStage()
     def fetchLocalDepsStage = new FetchLocalDepsStage()
 
+    node {
+        oneAppConfig.config()
+    }
+
     pipeline {
         agent any
         environment {
