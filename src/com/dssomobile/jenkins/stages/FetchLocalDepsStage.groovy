@@ -1,3 +1,5 @@
+package com.dssomobile.jenkins.stages
+
 import com.dssomobile.jenkins.models.CodeProjectDo
 import com.dssomobile.jenkins.models.DartPackageDo
 
