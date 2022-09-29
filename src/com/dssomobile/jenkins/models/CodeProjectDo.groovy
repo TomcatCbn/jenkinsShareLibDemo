@@ -1,8 +1,8 @@
 package com.dssomobile.jenkins.models
 
 import com.dssomobile.jenkins.models.DartPackageDo
-// 代码仓库描述
 
+// 代码仓库描述
 class CodeProjectDo {
 
     // 仓库名字/也是目录名
@@ -27,4 +27,13 @@ class CodeProjectDo {
         ]
     }
 
+    bool containsPackage(String packageName) {
+        for( pack in packages) {
+            if(pack.packageName == packageName){
+                return true
+            }
+        }
+
+        return false
+    }
 }

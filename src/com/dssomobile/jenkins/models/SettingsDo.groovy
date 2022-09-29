@@ -1,6 +1,8 @@
 package com.dssomobile.jenkins.models
 
+// 整个工程的全局配置
 class SettingsDo {
+
     // 默认仓库代码存放的位置
     String defaultPackageDir
 
@@ -25,4 +27,5 @@ class SettingsDo {
                 gitCredentialsId : gitCredentialsId,
         ]
     }
+
 }
