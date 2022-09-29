@@ -14,11 +14,11 @@ def name() {
 
 def fetchLocalDeps(CodeProjectDo projectDo) {
     log.i("${name()}: fetch local deps, ${projectDo.key}")
-
+    def res = []
     dir("${Config.settings.defaultPackageDir}/${projectDo.key}") {
         sh "${DssomobileTool.TOOL_CMD} ${DssomobileTool.FETCH_LOCAL_DEPS} pubspec.yaml local_deps_temp.properties"
         def prop = fileTools.read_properties('local_deps_temp.properties')
-        def res = []
+
         prop.each {
             for ( codeProj in Config.codeProjects) {
                 if (codeProj.containsPackage(it.key)) {
