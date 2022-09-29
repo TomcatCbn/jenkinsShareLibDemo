@@ -9,9 +9,9 @@ def config() {
 
 def defaultSettings() {
         Config.codeProjects = [
-            'dssomobile-oneapp-basic-error': basic_error().toMap(),
+            'dssomobile-oneapp-basic-error': basic_error(),
 
-            'dssomobile-oneapp-app-main'   : app_main().toMap(),
+            'dssomobile-oneapp-app-main'   : app_main(),
     ]
 
         Config.settings = [
