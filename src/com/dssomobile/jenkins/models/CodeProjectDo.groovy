@@ -1,6 +1,8 @@
 package com.dssomobile.jenkins.models
 
+import com.dssomobile.jenkins.models.DartPackageDo
 // 代码仓库描述
+
 class CodeProjectDo {
 
     // 仓库名字/也是目录名
@@ -22,24 +24,6 @@ class CodeProjectDo {
             key: key,
             repoUrl: repoUrl,
             packages: p
-        ]
-    }
-
-}
-
-// 描述dart包信息
-class DartPackageDo {
-
-    // package唯一标识名字
-    String packageName
-
-    // 相对路径
-    String relativePath
-
-    Map toMap() {
-        return [
-            packageName: packageName,
-            relativePath: relativePath,
         ]
     }
 
