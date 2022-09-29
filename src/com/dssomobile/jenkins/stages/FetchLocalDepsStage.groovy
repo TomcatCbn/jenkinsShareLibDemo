@@ -29,7 +29,7 @@ def fetchLocalDeps(CodeProjectDo projectDo) {
             }
         }
 
-        log.i("select code projects is ${res.keys()}")
+        log.i("select code projects is ${res.keySet()}")
 
         Config.dynamicData.selectedProject = res.values()
     }
