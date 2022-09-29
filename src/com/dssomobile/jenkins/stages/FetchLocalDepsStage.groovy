@@ -18,7 +18,7 @@ def fetchLocalDeps(CodeProjectDo projectDo) {
     dir("${Config.settings.defaultPackageDir}/${projectDo.key}") {
         sh "${DssomobileTool.TOOL_CMD} ${DssomobileTool.FETCH_LOCAL_DEPS} pubspec.yaml local_deps_temp.properties"
         def prop = fileTools.read_properties('local_deps_temp.properties')
-        log.i("local dependencies is \n ${prop.each{"${it.key}=${it.value}"}.join("\n")}")
+        log.i("local dependencies is \n ${prop.join("\n")}")
         def res = [:]
         prop.each {
             for (codeProj in Config.codeProjects.values()) {
