@@ -1,0 +1,19 @@
+name: tools_jenkins
+description: tools for jenkins.
+version: 0.0.1
+homepage: https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-internal-local
+publish_to: https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-internal-local
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+executables:
+  dssomobile:
+
+dependencies:
+  yaml: ^3.1.1
+  args: ^2.0.0
+
+dev_dependencies:
+  kit_dartlints: ^0.1.0

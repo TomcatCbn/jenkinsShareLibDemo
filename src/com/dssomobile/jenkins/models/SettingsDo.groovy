@@ -15,4 +15,14 @@ class SettingsDo {
 
     // git credentialsId
     String gitCredentialsId
+
+    Map toMap() {
+        return [
+                defaultPackageDir: defaultPackageDir,
+                dartPubHostedUrl : dartPubHostedUrl,
+                dartTokenEnvVar  : dartTokenEnvVar,
+                dartPublishToUrl : dartPublishToUrl,
+                gitCredentialsId : gitCredentialsId,
+        ]
+    }
 }

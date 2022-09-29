@@ -3,8 +3,10 @@
 // 2.构建android渠道
 // 3.发布应用
 
-import com.dssomobile.jenkins.stages.CodeUpdateStage
 import com.dssomobile.jenkins.stages.BuildStage
+import com.dssomobile.jenkins.stages.CodeUpdateStage
+import com.dssomobile.jenkins.stages.EnvironmentPrepareStage
+import com.dssomobile.jenkins.stages.FetchLocalDepsStage
 
 // jenkins pipeline入口
 def call(String appProjectKey, String branchName) {
@@ -12,10 +14,8 @@ def call(String appProjectKey, String branchName) {
 
     def codeUpdateStage = new CodeUpdateStage()
     def buildStage = new BuildStage()
-
-    node {
-        oneAppConfig.config()
-    }
+    def environmentStage = new EnvironmentPrepareStage()
+    def fetchLocalDepsStage = new FetchLocalDepsStage()
 
     pipeline {
         agent any
@@ -23,11 +23,40 @@ def call(String appProjectKey, String branchName) {
             TOKEN_JFROG = "${env.TOKEN_JFROG}"
         }
         stages {
+
+            stage('environmentPrepareStage') {
+                steps {
+                    script {
+                        log.i("Stage: ${environmentStage.name()} begin...")
+                        environmentStage.prepareEnvironment(Config.settings)
+                    }
+                }
+            }
+
             stage('codeUpdateStage') {
                 steps {
                     script {
                         log.i("Stage: ${codeUpdateStage.name()} begin...")
                         codeUpdateStage.getCodeFromGit([Config.codeProjects[appProjectKey]], Config.settings, branchName)
+                    }
+                }
+            }
+
+            stage('fetchLocalDepsStage') {
+                steps {
+                    script {
+                        log.i("Stage: ${fetchLocalDepsStage.name()} begin...")
+                        fetchLocalDepsStage.fetchLocalDeps(Config.codeProjects[appProjectKey])
+                    }
+                }
+            }
+
+            stage('codeUpdateStage') {
+                steps {
+                    script {
+                        log.i("Stage: ${codeUpdateStage.name()} begin...")
+                        log.i("local dependency is ${Config.dynamicData.selectedProject}")
+                        codeUpdateStage.getCodeFromGit(Config.dynamicData.selectedProject, Config.settings, branchName)
                     }
                 }
             }
