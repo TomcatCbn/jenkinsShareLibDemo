@@ -1,7 +1,9 @@
 import com.dssomobile.jenkins.models.CodeProjectDo
 import com.dssomobile.jenkins.models.SettingsDo
 
-// pipeline中全局配置汇总，外部注入
+/**
+ * pipeline中全局配置汇总，外部注入
+ */
 class Config implements Serializable {
     // 当前所有工程信息
     static Map<String, CodeProjectDo> codeProjects = [:]

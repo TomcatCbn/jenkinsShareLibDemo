@@ -5,12 +5,13 @@
 package com.dssomobile.jenkins.stages
 
 import com.dssomobile.jenkins.models.SettingsDo
+import com.dssomobile.jenkins.models.CodeProjectDo
 
 def name() {
     return 'Build Stage'
 }
 
-def buildAndroid(/*CodeProjectDo*/ codeProjectDo, SettingsDo settingsDo) {
+def buildAndroid(CodeProjectDo codeProjectDo, SettingsDo settingsDo) {
     log.i("${name()}: 执行buildAndroid")
     script {
         dir("${settingsDo.defaultPackageDir}/${codeProjectDo.key}") {
