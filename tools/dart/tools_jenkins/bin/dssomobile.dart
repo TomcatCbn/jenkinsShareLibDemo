@@ -4,6 +4,10 @@ import 'package:tools_jenkins/src/command/get_overriden_deps.dart';
 import 'package:tools_jenkins/version.dart';
 
 Future<void> main(List<String> arguments) async {
+  if (arguments.isEmpty) {
+    return;
+  }
+
   if (arguments.contains('--version') || arguments.contains('-v')) {
     print(dssomobileVersion);
 
@@ -16,6 +20,7 @@ Future<void> main(List<String> arguments) async {
       await fetchLocalDeps(arguments[1], arguments[2]);
       break;
     default:
+      print('unknown cmd, ${arguments[0]}');
       break;
   }
 }

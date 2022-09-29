@@ -33,8 +33,8 @@ Future<void> fetchLocalDeps(
   final YamlMap? map = pubspecYaml['dependency_overrides'] as YamlMap?;
   if (map != null) {
     final openWrite = outPutFile.openWrite();
-    map.forEach((key, value) {
-      if (value['path'] != null) {
+    map.forEach((dynamic key, dynamic value) {
+      if (value is YamlMap && value['path'] != null) {
         openWrite.writeln('$key=${value['path']}');
       }
     });

@@ -1,0 +1,12 @@
+clr_order=../dssomobile-oneapp-clr-order
+app_setting=../dssomobile-oneapp-app-setting
+ui_basic=../dssomobile-oneapp-ui-basic
+basic_modular=../dssomobile-oneapp-basic-modular
+app_account=../dssomobile-oneapp-app-account
+clr_account=../dssomobile-oneapp-clr-account/
+basic_push=../dssomobile-oneapp-basic-push
+ui_payment=../dssomobile-oneapp-clr-payment/packages/ui_payment
+clr_payment=../dssomobile-oneapp-clr-payment
+basic_webview=../dssomobile-oneapp-basic-webview/basic_webview
+app_media=../dssomobile-oneapp-app-media
+app_order=../dssomobile-oneapp-app-order
