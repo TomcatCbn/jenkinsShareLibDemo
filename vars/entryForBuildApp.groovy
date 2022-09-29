@@ -31,19 +31,19 @@ def call(String appProjectKey, String branchName) {
                 steps {
                     script {
                         log.i("Stage: ${codeUpdateStage.name()} begin...")
-                        codeUpdateStage.getCodeFromGit(Config.codeProjects.values(), Config.settings, branchName)
+                        codeUpdateStage.getCodeFromGit([Config.codeProjects[appProjectKey]], Config.settings, branchName)
                     }
                 }
             }
 
-            // stage('buildStage') {
-            //     steps {
-            //         script {
-            //             log.i("Stage: ${buildStage.name()} begin...")
-            //             buildStage.buildAndroid(Config.codeProjects[mainProject], Config.settings)
-            //         }
-            //     }
-            // }
+            stage('buildStage') {
+                steps {
+                    script {
+                        log.i("Stage: ${buildStage.name()} begin...")
+                        buildStage.buildAndroid(Config.codeProjects[appProjectKey], Config.settings)
+                    }
+                }
+            }
         }
     }
 }
