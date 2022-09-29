@@ -5,17 +5,13 @@
 
 import com.dssomobile.jenkins.stages.CodeUpdateStage
 import com.dssomobile.jenkins.stages.BuildStage
-import com.dssomobile.jenkins.models.CodeProjectDo
 
 // jenkins pipeline入口
 def call(String appProjectKey, String branchName) {
     log.i("begin pipeline...entryForBuildApp, app = $appProjectKey")
 
     def codeUpdateStage = new CodeUpdateStage()
-    // def buildStage = new BuildStage()
-//    def deployStage = new DeployStage()
-
-    // def mainProject = appProject.key
+    def buildStage = new BuildStage()
 
     node {
         oneAppConfig.config()
