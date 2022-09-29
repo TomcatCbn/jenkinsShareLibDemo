@@ -12,4 +12,7 @@ class SettingsDo {
 
     // dart package publish to 地址
     String dartPublishToUrl
+
+    // git credentialsId
+    String gitCredentialsId
 }

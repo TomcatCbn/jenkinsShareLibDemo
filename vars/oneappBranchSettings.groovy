@@ -5,12 +5,6 @@ def config() {
     defaultSettings()
 }
 
-def keyRepoUrl = 'repoUrl'
-def keyKey = 'key'
-def keyPackages = 'packages'
-def keyPackageName = 'packageName'
-def keyRelativePath = 'relativePath'
-
 def defaultSettings() {
 
     Config.codeProjects = [
@@ -41,7 +35,8 @@ def defaultSettings() {
             defaultPackageDir: 'packages',
             dartPubHostedUrl : 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-virtual',
             dartTokenEnvVar: 'TOKEN_FOR_JFROG',
-            dartPublishToUrl: 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-internal-local'
+            dartPublishToUrl: 'https://jfrog-prod.maezia.com/artifactory/api/pub/dssomobile-pub-internal-local',
+            gitCredentialsId: 'gitlab0',
     ]
 }
 

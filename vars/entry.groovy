@@ -1,6 +1,5 @@
 import com.dssomobile.jenkins.stages.CodeUpdateStage
 import com.dssomobile.jenkins.stages.BuildStage
-
 //import com.dssomobile.jenkins.stages.DeployStage
 
 // jenkins pipeline入口
@@ -12,7 +11,6 @@ def call() {
 //    def deployStage = new DeployStage()
 
     def branchName = 'develop'
-    def credentialsId = 'gitlab0'
     def mainProject = 'dssomobile-oneapp-app-main'
 
     node {
@@ -29,7 +27,7 @@ def call() {
                 steps {
                     script {
                         log.i("Stage: ${codeUpdateStage.name()} begin...")
-                        codeUpdateStage.getCodeFromGit(Config.codeProjects.values(), Config.settings, branchName, credentialsId)
+                        codeUpdateStage.getCodeFromGit(Config.codeProjects.values(), Config.settings, branchName)
                     }
                 }
             }
